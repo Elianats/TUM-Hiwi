@@ -1,0 +1,40 @@
+#Data Pre-Processing packages:
+import numpy as np 
+import pandas as pd 
+from datetime import datetime
+
+#Data Visualization Packages:
+#Seaborn
+import seaborn as sns
+sns.set(rc={'figure.figsize':(10,6)})
+custom_colors = ["#4e89ae", "#c56183","#ed6663","#ffa372"]
+
+#Matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+#Colorama
+from colorama import Fore, Back, Style # For text colors
+y_= Fore.CYAN
+m_= Fore.WHITE
+
+#NetworkX
+import networkx as nx
+import plotly.graph_objects as go #To construct network graphs
+
+#To avoid printing of un necessary Deprecation warning and future warnings!
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+#Time series Analysis pacakages:
+
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.stattools import kpss
+from statsmodels.tsa.stattools import adfuller
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+
+#Facebook Prophet packages:
+from fbprophet import Prophet
+from fbprophet.diagnostics import cross_validation, performance_metrics
+from fbprophet.plot import add_changepoints_to_plot, plot_cross_validation_metric
